@@ -13,16 +13,44 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
+  <div class="toy-robot-remote">
+    <form class="ion-padding" [formGroup]="form" (submit)="place()">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="fixed">X</ion-label>
+          <ion-input type="number" formControlName="x" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Y</ion-label>
+          <ion-input type="number" formControlName="y" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="fixed">Facing</ion-label>
+          <ion-select formControlName="facing" placeholder="Select Facing">
+            <ion-select-option
+              *ngFor="let facing of facings"
+              [value]="facing.value"
+              >{{facing.viewValue}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-button type="submit" expand="full" [disabled]="form.invalid"
+        >Place</ion-button
       >
-    </p>
+    </form>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="move()">Move</ion-button>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="left()">Left</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="right()">Right</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-button expand="block" (click)="report()">Report</ion-button>
+    </div>
   </div>
 </ion-content>

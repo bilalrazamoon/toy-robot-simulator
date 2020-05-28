@@ -14,6 +14,12 @@ const FACINGS = [Facing.East, Facing.North, Facing.West, Facing.South];
 
 const SIZE = 5;
 
+export interface Value {
+  x: number;
+  y: number;
+  facing: Facing;
+}
+
 export class ToyRobot {
   placed = false;
 
@@ -57,14 +63,13 @@ export class ToyRobot {
     this._turn(Direction.Right);
   }
 
-  report(): void {
+  report(): Value {
     if (!this.placed) {
       throw Error('Place object first!');
     }
 
     const { x, y, facing } = this;
-
-    console.log({ x, y, facing });
+    return { x, y, facing };
   }
 
   private _turn(direction: Direction): void {
