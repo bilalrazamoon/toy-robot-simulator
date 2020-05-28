@@ -12,7 +12,7 @@ enum Direction {
 
 const FACINGS = [Facing.East, Facing.North, Facing.West, Facing.South];
 
-const SIZE = 5;
+export const SIZE = 5;
 
 export interface Value {
   x: number;

@@ -13,6 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
+  <div class="toy-robot-visualizer">
+    <ion-row *ngFor="let row of rows">
+      <ion-col *ngFor="let col of row">
+        <ion-icon
+          *ngIf="col"
+          name="arrow-forward-outline"
+          class="object"
+          [style]="_objectTransformStyle"
+        ></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+
   <div class="toy-robot-remote">
     <form class="ion-padding" [formGroup]="form" (submit)="place()">
       <ion-list lines="full" class="ion-no-margin ion-no-padding">

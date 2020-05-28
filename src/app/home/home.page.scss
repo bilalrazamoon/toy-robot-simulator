@@ -1,2 +1,36 @@
+.toy-robot-visualizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ion-row {
+    height: 50px;
+
+    &:not(:last-child) {
+      ion-col {
+        border-bottom-width: 0;
+      }
+    }
+  }
+
+  ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--ion-color-primary);
+    font-size: 20px;
+    text-align: center;
+    width: 50px;
+
+    &:not(:last-child) {
+      border-right-width: 0;
+    }
+  }
+
+  .object {
+    display: inline-block;
+  }
+}
+
 .toy-robot-remote {
 }
