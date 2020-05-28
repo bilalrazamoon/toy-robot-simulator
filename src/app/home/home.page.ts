@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-enum Facing {
+export enum Facing {
   East = 'east',
   West = 'west',
   North = 'north',
