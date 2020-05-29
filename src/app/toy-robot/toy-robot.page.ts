@@ -4,11 +4,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToyRobot, Facing, Value, SIZE } from './toy-robot';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-toy-robot',
+  templateUrl: 'toy-robot.page.html',
+  styleUrls: ['toy-robot.page.scss'],
 })
-export class HomePage {
+export class ToyRobotPage {
   toyRobot: ToyRobot;
 
   rows: number[][] = Array(SIZE).fill(Array(SIZE).fill(false));

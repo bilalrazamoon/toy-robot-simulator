@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import { ToyRobotPage } from './toy-robot.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { ToyRobotPageRoutingModule } from './toy-robot-routing.module';
 
 @NgModule({
   imports: [
@@ -12,8 +12,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    ToyRobotPageRoutingModule,
   ],
-  declarations: [HomePage],
+  declarations: [ToyRobotPage],
 })
-export class HomePageModule {}
+export class ToyRobotPageModule {}
